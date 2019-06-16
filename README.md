@@ -6,3 +6,4 @@ My solutions to the contest problems.
 http://pscsta.org/pscsta-programming-contest/
 
 ## Problem Packet
+See file "Novice Packet.txt"
