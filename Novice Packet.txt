@@ -1,0 +1,524 @@
+-1-
+PSCSTA Programming Contest
+Spring 2019 Packet – Intermediate/Novice
+DO NOT OPEN THIS PACKET UNTIL INSTRUCTED TO DO SO
+General Rules/Notes
+1. You may work on the problems in any order you like, and you do not need to complete a
+problem before beginning another.
+2. All problems have a starting value of 60 points. A penalty of 5 points will be assessed
+each time that an incorrect solution is submitted. This penalty will only be assessed if a
+solution is ultimately judged as correct.
+3. There is no extraneous input. All input is exactly as specified in the problem. Unless
+specified by the problem, integer inputs will not have leading zeros. Unless otherwise
+specified, your program should read to the end of file.
+4. Your program’s output must exactly match the format described in the problem. You
+should have no extraneous output, except as allowed by a specific problem.
+5. The sample input/output does not necessarily cover all possible cases. Your program
+must work for all possible inputs as described in the problem. Judges’ test cases will be
+more comprehensive than the samples.
+List of Problems
+I. Happy Kat
+II. Emerald City Rabbit
+III. Ice Cream Catch
+IV. Robot Commands
+V. Infinite Table
+VI. Secret Message
+VII. Genome Reverse Complement
+VIII. Hashtags
+IX. Snowplow Street
+X. Robot Beacon Search
+XI. Inverted Knight Moves
+XII. Dewey Decimal
+XIII. Boat-Z
+XIV. Abecedarian Words
+XV. Missing Numbers
+-2-
+I. Happy Kat
+Input File: N/A
+Description
+Write a program to draw a happy cat to wish yourself luck for the rest of the contest!
+Input
+None
+Output
+Output exactly the following:
+ /\_/\
+ ____/ o o \
+ /~____ =o= /
+(______)__m_m)
+Sample Input/Output
+Sample input file Sample output
+N/A /\_/\
+ ____/ o o \
+ /~____ =o= /
+(______)__m_m)
+-3-
+II. Emerald City Rabbit
+Input File: rabbit.in
+Description
+The road to Emerald City is paved with 1-feet long bricks. The bricks are numbered 1, 2, 3, 4,
+and so on. Every odd-numbered brick is yellow; every even-numbered brick is red. The
+Emerald City Rabbit starts at brick 1 and makes 3 jumps forward, jumping by an integer number
+of feet each time. Given how far he jumps each time, determine how many red bricks he lands
+on.
+Input
+The first line of input indicates the number of cases, N. Each of the next N lines contains 3
+integers each. The first integer represents the number of feet that the Emerald City Rabbit
+jumps on the first jump, the second integer the second jump, and the third integer the third jump.
+You may assume that each integer jump is between 0 and 1000 inclusive.
+Output
+The number of even-numbered red bricks that the Emerald City Rabbit jumps on in each case.
+Each number should be on a separate line.
+Sample Input/Output
+Sample input file Sample output
+4
+2 4 16
+2 8 3
+1 3 1
+5 18 22
+0
+1
+2
+3
+-4-
+III. Ice Cream Catch
+Input File: icecreamcatch.in
+Description
+Sandy is helping her professor study human reaction time by analyzing how well test subjects
+play a video game. In the video game, the player must move an ice cream cone to catch
+scoops of ice cream that fall from the sky. The video game records both the minimum and
+maximum number of scoops that each test subject catches during twenty trials. For each set of
+test subjects, Sandy must calculate the overall minimum and maximum number of scoops
+caught by any test subject during any trial and calculate the range of scoops caught during all
+trials.
+Input
+The first line of input is the number of sets of data to summarize, S. For each set of data, the
+first line indicates how many test subjects, N, are in the set of data. Each of the next N lines
+contains two numbers: the minimum number of scoops and the maximum number of scoops
+caught by the test subject. The minimum and maximum are separated by a space and both are
+between 0 and 1000 inclusive.
+Output
+For each set of test subject data, output the overall minimum, the overall maximum, and the
+overall range (maximum – minimum +1) of number of ice cream scoops caught. These three
+numbers should be separated by a space. The summary for each set of data must be on a
+separate line.
+Sample Input/Output
+Sample input file Sample output
+3
+3
+12 24
+7 19
+11 27
+4
+4 19
+15 27
+14 26
+18 27
+3
+1 1000
+4 200
+9 199
+7 27 21
+4 27 24
+1 1000 1000
+-5-
+IV. Robot Commands
+Input File: robotcommands.in
+Description
+Ronny the Robot can only recognize commands that consist of a single uppercase English letter
+describing the direction to move (R – right, L – left, F – forward, B – backward) followed by a
+positive integer describing the number of steps it needs to take. Ronny always faces the same
+direction and never turns.
+For example, R15 means that Ronny needs to make 15 steps to the right.
+For each series of commands, indicate whether Ronny the Robot ends up in the same place
+that it started from.
+Input
+The first line of input is the number of sets of commands for Ronnie, S.
+The first line of each set will be a number, N, representing the number of commands in the set.
+The second line of each set will contain N commands for Ronnie to execute. Each command is
+separated by a space.
+Output
+For each set of commands, output YES if Ronny the Robot will return to the same place where it
+started before executing the commands. Output NO, if Ronny will end up in some other place.
+The result for each set of commands should be on a separate line.
+Sample Input/Output
+Sample input file Sample output
+4
+6
+R1 F2 F1 L3 B3 R7
+6
+R10 F10 L30 B30 R20 F20
+4
+R5 B5 L5 F5
+3
+R3 L40 F15
+NO
+YES
+YES
+NO
+-6-
+V. Infinite Table
+Input File: infinite.in
+Description
+The following shows the layout of the first 21 numbers in an infinite square table:
+1 3 6 10 15 21
+2 5 9 14 20
+4 8 13 19
+7 12 18
+11 17
+16
+Successive numbers in an infinite square table are populated diagonally from the lower left to
+the upper right and then back to the lower left again.
+Given a number in an infinite square table, output the number of neighbors that it has. A
+“neighbor” of a number in an infinite square is a number either immediately above, below, to the
+right, or to the left of the number in the infinite square.
+Input
+The first line of input is how many numbers to count the neighbors for, N. Each of the next N
+lines will specify a single number less than 1,000,000 to find the number of neighbors in an
+infinite square table for.
+Output
+For each number in an infinite table, list the number of neighbors it has. Each number of
+neighbors should be on a separate line of output.
+-7-
+Sample Input/Output
+Sample input Sample output
+5
+2
+13
+18
+21
+1
+3
+4
+4
+3
+2
+-8-
+VI. Secret Word
+Input File: secretword.in
+Description
+A secret word is hidden in a jumble of words. To read it, you need to combine the last letter of
+the first word, the second to the last letter in the second word, the third to the last letter in the
+third word, etc. until the end of the jumble of words.
+If the number of letters in a word is less than the word’s position in the jumble (e.g. if the sixth
+word has only five letters), then that word does not contribute to the secret word
+Input
+The first line of input is the number of secret word puzzles to solve, S. The first line in each
+secret word puzzle is the number of words in the jumble, N. The second line in each secret word
+puzzle contains the N words each separated by a space. All words are in upper case.
+Output
+The secret word hidden in each puzzle. Each secret word should be on its own line and in
+upper case.
+Sample Input/Output
+Sample input file Sample output
+3
+4
+SAW GREEN HOUSES TOUR
+5
+ARC COOL TRADED TO EQUAL
+3
+MAD COLOR BEGIN
+WEST
+CODE
+DOG
+-9-
+VII. Genome Reverse Complement
+Input File: genome.in
+Description
+A genetic DNA strand is written using 4 letters A,T,C, and G. Each letter stands for a
+nucleobase: cytosine (C), guanine (G), adenine (A), and thymine (T). The reverse complement
+of a DNA strand is written by replacing C with G, A with T, G with C, T with A in the original
+strand and then reversing the result.
+For example, for the DNA strand “CGTA” the reverse complement is TACG.
+Input
+The first line of input is the number of DNA strands in the file, N. Each of the next N lines will
+contain a single DNA strand.
+Output
+For each DNA strand, output its reverse complement. Each reverse complement strand should
+be on a separate line of output.
+Sample Input/Output
+Sample input file Sample output
+4
+ACTG
+GATTACA
+AACGGCCAT
+CATGCATG
+CAGT
+TGTAATC
+ATGGCCGTT
+CATGCATG
+-10-
+VIII. Hashtags
+Input File: hashtags.in
+Description
+A new app uses hashtags to let its users tag data. Hashtags are pound signs (#) followed by
+letters, such as #new and #coolApp. They can appear at the beginning of a line or after a space.
+Given a short post, find the hashtags.
+Input
+The first input line will be the number of test cases, N. The next N lines will each contain a short
+phrase containing hashtags.
+A hashtag is a substring at the start of a line or after a space. It starts with a # that is followed by
+at least one letter (either upper case A - Z and/or lower case a – z) and continues until the end
+of the line or until a character that is not a letter. There will be at least one hashtag in every
+input and each hashtag will appear only once within a given input.
+Output
+For each line, output all of the hashtags found in the line. Do not include the # symbol and
+separate entries with one space. Print the hashtags in the order that they appear. Maintain the
+capitalization within each hashtag. Place each list of hashtags on its own line.
+Sample Input/Output
+Sample input file Sample output
+4
+Vote #hashtags #1
+I like #cats and #dogs.
+#Puzzles are #fun#to#solve
+Use #symbols like @ and #
+hashtags
+cats dogs
+Puzzles fun
+symbols
+-11-
+IX. Snowplow Street
+Input File: snowplow.in
+Description
+A snow-covered street is a long rectangle that is 3 squares wide. Some of the 1x1 squares are
+occupied by abandoned cars.
+A snow plow is a 2x2 square. The snow plow would like to clear a path from one end of the
+street to another. The snow plow can move forward, backward, right, or left, one square at a
+time. The snow plow cannot push cars or drive over them. The snow plow is next to one
+entrance to the street. Can it reach the other end?
+Input
+The first line of input is the number of different streets to be cleared, S. For each street, the first
+line will contain a number (N, N > 0) – the length of the street. The next N lines will contain 3
+characters each. Dots will stand for vacant squares; an “x” will indicate a square with an
+abandoned car.
+The snow plow will always start at the top left of the street. The 4 S in the Start picture below
+indicates the initial position of the snow plow relative to the start of each street (but these rows
+are not part of the puzzle. The Finish picture below shows that the snow plow has reached the
+end of the street in the puzzle.
+Start Finish
+SS.
+SS.
+x..
+...
+...
+..x
+x..
+...
+SS.
+SSx
+Output
+Print NO if the snow plow cannot reach the other end of the street because of abandoned cars.
+Print YES if the snow plow can reach the other end of the street and indicate the length of the
+path that it took.
+If, at the entrance to the street, the snow plow should move 1 square right or left to avoid a car,
+that movement should count toward the path length. For the path length, you only need to
+include the number of moves for the front of the snow plow to reach the end of the street. 
+-12-
+Sample Input/Output
+Sample input file Sample output
+3
+4
+..x
+...
+...
+x..
+4
+..x
+...
+x..
+...
+4
+x..
+...
+...
+..x
+YES 5
+NO
+YES 6
+-13-
+X. Robot Beacon Search
+Input File: beacon.in
+Description
+Ruby the Robot is standing at the (0,0) point of the infinite rectangular grid. Each line in the grid
+represents 1 meter. Ruby’s goal is to find a beacon which is located at one of the nodes of this
+grid. Ruby starts moving in a spiral, as shown at the picture. Ruby stops when she gets to the
+node where the beacon is.
+Given two numbers which specify the coordinates of the beacon, compute the length of Ruby’s
+path.
+Input
+The first line of input is the number of different beacons to be found, N. The following lines
+each contain two integers – the x and the y coordinates of the beacon that Ruby must find.
+Output
+Output the length of the path in meters that Ruby must take to go from the origin to the beacon
+following the spiral path shown above.
+Sample Input/Output
+Sample input file Sample output
+5
+0 1
+1 1
+1 -2
+-2 0
+-5 -5
+3
+2
+23
+18
+110
+-14-
+XI. Inverted Knight Moves
+Input File: knight.in
+Description
+In chess, differently shaped pieces with different abilities move on an 8 by 8 board. The
+Knight piece always moves in an L shape, either two spaces horizontally and one space
+vertically, or two spaces vertically and one horizontally. Given 3 squares a Knight can move to,
+find where the Knight is originally positioned.
+Input
+The first line will contain the number of board configurations to solve, N. Each board
+configuration will be represented by three squares coordinates, each separated by a space. The
+squares will be listed in alphabetical order.
+Every square coordinate is a capital letter (A - H, where A is left and H is right) for the column
+and a number (1 - 8, where 1 is bottom and 8 is top) for the row.
+For reference, in the example below, X is at location E4.
+ A B C D E F G H
+8 - - - - - - - -
+7 - - - - - - - -
+6 - - - - - - - -
+5 - - - - - - - -
+4 - - - - X - - -
+3 - - - - - - - -
+2 - - - - - - - -
+1 - - - - - - - -
+Output
+Given each configuration of three squares, output the square where a Knight must be in order to
+move to each of the provided squares.
+Output the coordinate of the Knight's square. Each solution should appear on its own line.
+-15-
+Sample Input/Output
+Sample input file Sample output
+2
+D6 F2 G5
+B5 C2 C4
+E4
+A3
+-16-
+XII. Dewey Decimal
+Input File: dewey.in
+Description
+A library uses a special code to order its books. Each volume is assigned a three-character
+value: two digits 0-9 for the subject, followed by the first letter of the author's last name. Each
+number contains two digits, even if it is less than 10. The letters are always capitalized.
+Books are organized on the shelves by author name, then ties are broken by the leading
+number. Given a jumbled collection of books, your task is to find the correct order.
+Input
+The first input line will be a number of collections, S. The next S lines will each contain an
+integer specifying the number of books N in the collection to organize followed by the identifiers
+for the N books. Each value will be separated by one space, and a book will appear only once
+within each situation.
+Output
+Output the book identifiers for each collection in the correct order, first to last, each separated
+by one space. The output for each case should be on its own line.
+Sample Input/Output
+Sample input file Sample output
+3
+4 13A 25Z 34C 07A
+2 30R 12V
+3 80M 96R 87Q
+07A 13A 34C 25Z
+30R 12V
+80M 87Q 96R
+-17-
+XIII. Boat-Z
+Input File: boatz.in
+Description
+Boat-Z is poker-like game played where each player has a hand of five six-sided dice and each
+hand is ranked in categories in the following order from lowest to highest
+• Total Sum of 5 Dice
+• One Pair
+• Two Pair
+• Three of a Kind
+• Full House (Three of a kind + 2 of a kind)
+• Four of a Kind
+• Straight (1-2-3-4-5 or 2-3-4-5-6)
+• Five of a Kind
+Within each category, hands are ranked by the number on the qualifying dice. For example, if
+one player has a full house with “1 1 1 2 2” and another player has a full house with “1 1 2 2 2”,
+then the second player wins. If hands are in same category and have the same qualifying dice,
+then the hand with the higher sum of the five dice wins.
+Input
+The first line contains the number of Boat-Z games that you will need to determine the winner
+for. The first line in each game contains the number of hands in the game. Each hand in the
+game consists of a player name (no spaces) followed by the value of 5 die rows.
+Output
+Each game should output the winner of the game in the format
+[ABC] wins the Boat-Z game
+Where [ABC] is player with the winning hand. If two hands tie, output the name of the first
+player listed. The output for each Boat-Z game should be on its own line.
+-18-
+Sample Input/Output
+Sample input file Sample output
+3
+3
+Husky 5 3 1 4 2
+Wildcat 5 2 5 5 2
+Duck 3 1 6 6 1
+3
+Buffalo 6 2 6 2 3
+Beaver 5 6 6 2 2
+Bear 1 3 6 5 4
+4
+Bruin 6 3 4 3 3
+Cardinal 1 4 1 1 1
+Cougar 2 2 5 2 2
+SunDevil 3 6 6 3 3
+Husky wins the Boat-Z game
+Beaver wins the Boat-Z game
+Cougar wins the Boat-Z game
+-19-
+XIV. Abecedarian Words
+Input File: abcwords.in
+Description
+A word is called abecedarian if its letters are arranged in alphabetical order. For example, the
+English word ACT is abecedarian (letter A comes before C which comes before T in the English
+alphabet).
+Input
+The first line of input is the number of words in the file, N. Each next N lines will contain a single
+English word consisting of only uppercase letters. Each word will have at least 2 letters.
+Output
+For each word output YES if the word is abecedarian. Output NO if it is not.
+Sample Input/Output
+Sample input file Sample output
+5
+CATS
+BEE
+ALMOST
+SNAKE
+EFFORT
+NO
+YES
+YES
+NO
+YES
+-20-
+XV. Missing Numbers
+Input File: missing.in
+Description
+Given the start and end of a range of numbers, and a sum for values in the range, find which
+number is missing from within the range. All numbers are integers, and exactly one number
+within each range is absent.
+Input
+The first line of input will be the number of situations to solve, N. The next N lines will each
+contain three numbers separated by spaces. The first number will be the beginning of the range
+and the second number will be the end of the range, both inclusive. The third number will be the
+sum of every number in the range except one missing value.
+For each input case, the second number will be greater than the first number. All numbers will
+be nonnegative integers.
+Output
+Output the one missing number in each range. Each output should be on its own line.
+Sample Input/Output
+Sample input file Sample output
+3
+2 15 107
+7 24 270
+55 113 4869
+12
+9
+87
