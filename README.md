@@ -1,6 +1,6 @@
 # 2019-04-20 Puget Sound Coding Contest
 
-My solutions to the contest problems.
+My solutions to the contest problems. I received 2nd in the contest.
 
 ## Coding Contest
 http://pscsta.org/pscsta-programming-contest/
